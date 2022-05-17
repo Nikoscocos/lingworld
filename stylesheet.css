@@ -32,7 +32,7 @@ body {
     -webkit-backdrop-filter: blur(1.3rem);
 }
 .content {
-    padding: 70px 10px 10px 10px;
+    padding: 70px 20px 10px 20px;
     margin: auto;
     max-width: 1200px;
 }
@@ -219,16 +219,16 @@ img {
     background-color: rgba(37, 37, 37, 0.815);
 }
 .cont {
-    float: right;
-    width: 965px;
     color: white;
+    margin-left: 240px;
 }
 .card {
     float: right;
     background-color: rgba(27, 27, 27, 0.815);
     border-radius: 10px;
     padding: 10px 10px 13px 12px;
-    width: 965px;
+    width: 100%;
+    max-width: 965px;
     color: white;
     margin-bottom: 15px;
 }
@@ -306,6 +306,7 @@ iframe {
 }
 .revtext {
     line-height: 10px;
+    word-break: keep-all;
 }
 .indesc {
     margin-top: 5px;
@@ -316,9 +317,13 @@ iframe {
 .leftstr {
     color: rgb(107, 101, 101);
 }
-.leftstr, .rightstr {
+.leftstr {
     float: left; /* Обтекание справа */ 
-    width: 50%; /* Ширина текстового блока */
+    width: 30%; /* Ширина текстового блока */
+}
+.rightstr {
+    float: left; /* Обтекание справа */ 
+    width: 70%; /* Ширина текстового блока */
 }
 .rightstr {
     text-align: right; /* Выравнивание по правому краю */ 
@@ -360,4 +365,14 @@ iframe {
 }
 .petype {
     color: rgb(107, 101, 101);
+}
+@media screen and (max-width: 1024px) {
+    .inside, .fixd {
+        display: none;
+    }
+    .cont {
+        margin-left: 20px;
+        width: 120%;
+        margin-right: 0px;
+    }
 }
