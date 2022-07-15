@@ -11,7 +11,7 @@
     font-family: 'gilroybold';
 }
 body {
-    background-color: black;
+    background-color: black !important;
     margin-left: 0px;
     margin-top: 0px;
     margin-bottom: 10px;
@@ -32,7 +32,7 @@ body {
     -webkit-backdrop-filter: blur(1.3rem);
 }
 .content {
-    padding: 70px 20px 10px 20px;
+    padding: 75px 20px 10px 20px;
     margin: auto;
     max-width: 1200px;
 }
@@ -220,9 +220,9 @@ img {
 }
 .cont {
     color: white;
-    margin-left: 240px;
+    margin-left: 0px !important;
 }
-.card {
+.cardq {
     float: right;
     background-color: rgba(27, 27, 27, 0.815);
     border-radius: 10px;
@@ -272,6 +272,14 @@ img {
     float: left;
     width: calc(50% - 5px);
 }
+.lblockq {
+    float: left;
+    width: calc(50% - 5px);
+}
+.lblockmob {
+    width: 100%;
+    display: none;
+}
 .rblock {
     float: right;
     width: calc(50% - 5px);
@@ -306,7 +314,7 @@ iframe {
 }
 .revtext {
     line-height: 10px;
-    word-break: keep-all;
+    word-break: break-all;
 }
 .indesc {
     margin-top: 5px;
@@ -341,7 +349,7 @@ iframe {
     padding: 15px;
     font-size: 18px;
     display: inline-block;
-    width: calc(100% - 32px);
+    width: 100%;
 }
 .peoplew {
     margin-top: 5px;
@@ -351,7 +359,7 @@ iframe {
     padding: 15px;
     font-size: 18px;
     display: inline-block;
-    width: calc(100% - 32px);
+    width: 100%;
 }
 .peimg {
     width: 80px;
@@ -366,13 +374,24 @@ iframe {
 .petype {
     color: rgb(107, 101, 101);
 }
+@media screen and (min-width: 1024px) {
+    .cardq {
+        margin-right: -15px;
+    }
+}
 @media screen and (max-width: 1024px) {
     .inside, .fixd {
         display: none;
     }
     .cont {
         margin-left: 20px;
-        width: 120%;
+        width: 100%;
         margin-right: 0px;
+    }
+    #people {
+        display: none;
+    }
+    #peoplemob {
+        display: block;
     }
 }
